@@ -86,9 +86,9 @@ let Osszead = function(a, b){
 
 //Arrow function
 
-let Osszead = (a, b) => a + b;
+/*let Osszead = (a, b) => a + b;
 
-console.log(Osszead(14, 28))
+console.log(Osszead(14, 28))*/
 
 //Megjegyzések
 /* let ValamilyenFuggveny = () => ;
@@ -102,3 +102,27 @@ Ha egy paraméterem van:
      return ....;
  } ;
 */
+
+
+function objectToArray(objektum){
+
+}
+
+let objektum = {
+    /*key (mindig string) :value*/
+    "vezeteknev": "Börcsök",
+    "keresztnev": "Dávid",
+    "szuletesi ev": 1998,
+};
+
+//console.log(objektum.vezeteknev +  ' ' + objektum['keresztnev'] + ' ' + objektum["szuletesi ev"])
+
+
+let szoveg = "";
+
+
+for (let kulcs in objektum) {
+    szoveg += `<br /> A kulcs érték: ${kulcs}, és az érték: ${objektum[kulcs]}`;
+    
+}
+document.getElementById("kiir").innerHTML = szoveg;
